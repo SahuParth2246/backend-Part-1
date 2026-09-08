@@ -129,7 +129,10 @@ const loginUser = asyncHandler(async (req, res) => {
     }
 
     const { accessToken, refreshToken } = await generateAccessAndRefreshToken(user._id);
-
+    // so here we had two options whether to find the user again to get the
+    // updated information of the user
+    // 1. to manually assign the data in the user created before calling of generarte access adn refers one
+    //2. tr make a updated call to db again
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken");
 
     const options = {
@@ -153,5 +156,15 @@ const loginUser = asyncHandler(async (req, res) => {
             )
         );
 });
+
+const logoutUser = asyncHandler(async (req, res) => {
+    //token access karke check if it's the user or not
+    //find the user through token data
+    /// delete through mongoose and save the db
+    /*
+    sir ki strategy
+
+     */
+})
 
 export { registerUser, loginUser };
