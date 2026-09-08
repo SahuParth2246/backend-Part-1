@@ -1,28 +1,31 @@
 {
-  "name": "backendproject1",
+  "name": "backendbyme",
   "version": "1.0.0",
   "private": true,
-  "description": "my first backend project 🫂",
+  "description": "this is by me only",
   "license": "ISC",
-  "author": "mistaken_soul",
+  "author": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config src/index.js"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14",
-    "prettier": "^3.9.4"
+    "dev": "nodemon -r dotenv/config src/backend/index.js"
   },
   "dependencies": {
-    "axios": "^1.18.1",
+    "axios": "^1.19.0",
     "bcrypt": "^6.0.0",
+    "cloudinary": "^2.10.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.7.3",
-    "mongoose-aggregate-paginate-v2": "^1.1.4"
+    "mongoose": "^9.9.2",
+    "mongoose-aggregate-paginate-v2": "^1.1.5",
+    "multer": "^2.2.0",
+    "nodemon": "^3.1.14",
+    "prettier-ignore": "^0.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
   }
 }
